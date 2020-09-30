@@ -1,0 +1,48 @@
+<% include ../partials/header %>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1522308300961-fdb949cac8aa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1 class="intrans">Case Study</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container sub_animation">
+      <div class="row align-items-center d-flx">
+        <% cases.forEach(function(cases){ %>
+            <div class="news" style="margin:30px 0">
+
+                <div class="col-md-7" >
+                  <% if(cases.video_url){ %>
+                    <iframe width="560px" height="315px" style="margin:0 20px" class="mb-md-0" src="<%=cases.video_url%>"></iframe>
+                  <% }else if(cases.image_url){ %> 
+                    <img class="img-fluid rounded" style="margin:0 20px;width: 560px;height: 315px" src="<%=cases.image_url%>">
+                   
+                    <% }else{ %>
+                    <img class="img-fluid rounded" style="margin:0 20px;width: 560px;height: 315px" src="https://images.unsplash.com/photo-1516266967839-c9ab062fabc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1490&q=80">
+                    <% }; %>
+                    
+                </div>
+                <div class="col-md-5">
+                    <h3><%=cases.title%></h3>
+                    <p><%=cases.descr%></p>
+                    <hr>
+                </div>
+            </div>
+         <% }); %>
+      </div>
+    </div>
+
+    <hr>
+
+
+
+<% include ../partials/footer %>

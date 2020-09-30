@@ -1,0 +1,37 @@
+<% include ../../partials/header%>
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('https://wescoasttextile.com/wp-content/uploads/2017/10/DSC_0498-1.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+            <h1 class="intrans">Machines</h1>
+            <span class="sub_animation" style="font-size:23px">By <a class="anchor" href="http://www.daelimlab.com/" target ="_blank">Daelim Starlet</a></span>
+        </div>
+        </div>
+    </div>
+    </div>
+</header>
+
+    <!-- Main Content -->
+<div class="container sub_animation">
+    <div class="row">
+        <% machines.forEach(function(machines){ %>
+        <div class="col-md-4 col-sm-6">
+            <div class="card mb-4 " style="height:410px;" >
+                <img class="card-img-top" style="height:230px;" src="<%=machines.image_url%>">
+                <div class="card-body">
+                    <h5 class="card-title text-center pb-2 d-none d-lg-block font-weight-normal" style="font-size:12px;text-align:center"><%=machines.title%></h5>
+                    <a href="/machines/<%=machines.id%>" class="btn btn-outline-primary justify-content-center d-flex">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+</div>
+
+<hr>
+    
+    <% include ../../partials/footer %>

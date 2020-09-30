@@ -1,0 +1,37 @@
+<% include ../partials/header%>
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1484913503836-6f282489afae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')">
+    <div class="overlay"></div>
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+            <h1>Machines</h1>
+            <span>By <a class="anchor" href="http://www.daelimlab.com/" target ="_blank">Daelim Starlet</a></span>
+        </div>
+        </div>
+    </div>
+    </div>
+</header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <% machines.forEach(function(machine){ %>
+            <div class="col-md-4 col-sm-6">
+                <div class="card mb-4 " style="height:410px;" >
+                    <img class="card-img-top" style="height:230px;" src="<%=machine.image_url%>">
+                    <div class="card-body">
+                        <h5 class="card-title text-center pb-2 d-none d-lg-block"><%=machine.title%></h5>
+                        <a href="#" class="btn btn-outline-primary justify-content-center d-flex">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    </div>
+
+    <hr>
+    
+    <% include ../partials/footer %>

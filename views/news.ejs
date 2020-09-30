@@ -1,0 +1,41 @@
+<% include ../partials/header %>
+
+
+   <!-- Page Header -->
+   <header class="masthead" style="background-image: url('http://floridapolitics.com/wp-content/uploads/2015/08/newspaper-editorials.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1 class="intrans">News</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container sub_animation">
+    <div class="row align-items-center d-flux">
+        <% news.forEach(function(news){ %>
+            <div class="news">
+                <div class="col-md-7 my-4">
+                    <img class="img-fluid rounded mb-3 mb-md-0" style="margin:0 20px;width: 530px;height: 315px" src="<%=news.image_url%>">
+                </div>
+                <div class="col-md-5">
+                    <h3><%=news.title%></h3>
+                    <p><%=news.descr%></p>
+                </div>
+                <hr>
+            </div>
+       <% }); %>
+    </div>
+  </div>
+
+  <hr>
+
+
+
+
+<% include ../partials/footer %>

@@ -1,0 +1,36 @@
+<% include ../../partials/header %>
+
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('<%=cat[0].image_url%>')">
+    <div class="overlay"></div>
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+            <h1 class="intrans"><%=cat[0].name%></h1>
+            <span class="subheading sub_animation"><%=cat[0].descr%></span>
+        </div>
+        </div>
+    </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container sub_animation">
+    <h2 style="padding:10px 10px">Series :</h2>
+    <div class="row">
+        <% series.forEach(function(series){ %>
+
+            <div class="col-lg-8 col-md-10 mx-auto series">
+                <h4><a href="/dyes/series/<%=series.id%>"><%=series.title%></a></h4>
+                <p class="app font-weight-light">Dyeing application : <em class="font-weight-bold"><%=series.application%></em></p>
+                <p class="font-weight-light"><%=series.descr%></p>           
+            </div>
+            <hr>
+        <% }); %>
+    </div>
+</div>
+
+<hr>
+
+<% include ../../partials/footer %>

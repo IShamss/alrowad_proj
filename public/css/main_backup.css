@@ -1,0 +1,262 @@
+
+.changefont{
+font-weight: normal;
+font-size: 30px
+}
+.anchor{
+color: white;
+}
+a{
+text-decoration: none;
+}
+.cssTable td 
+{
+    text-align: center; 
+    vertical-align: middle;
+}
+
+.mytable{
+font-weight: 100;
+}
+.icon {
+    background: url('../img/logo3.svg');
+    height: 35px;
+    width: 35px;
+    display: block;
+    /* Other styles here */
+}
+.dimensions{
+width:580px;
+height:350px;
+}
+
+#head-h1{
+padding: 100px;
+}
+.slideshow { 
+position: static;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+z-index: 0;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+/*to animate the list items*/
+
+
+
+
+.slideshow li { 
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+background-size: cover;
+background-position: 70% 80%;
+background-repeat: no-repeat;
+opacity: 0;
+z-index: 0;
+animation: imageAnimation 50s linear infinite; 
+}
+
+/*adding the background images to the list items*/
+
+.slideshow li:nth-child(1) { 
+background-image: url("../img/1.jpg") 
+}
+.slideshow li:nth-child(2) { 
+background-image: url("../img/5.jpg");
+animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+background-image: url("../img/3.jpg");
+animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+background-image: url("../img/2.jpg");
+animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+background-image: url("../img/4.jpg");
+animation-delay: 40s; 
+}
+/*.slideshow li:nth-child(6) { */
+/*  background-image: url(/img/5.jpg);*/
+/*  animation-delay: 50s; */
+/*}*/
+
+/*changing the opacity to animate the pictures*/
+/*also imageAnimation refers to the variable set above ^*/
+@keyframes imageAnimation { 
+0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+}
+10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+}
+20% {
+    opacity: 1
+}
+30% {
+    opacity: 0
+}
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+    opacity: 1;
+}
+
+/* some additional css */
+div.news{
+display: flex;
+justify-content: space-between;
+align-items: center
+}
+div.news img{
+flex-basis: 500px;
+max-height: 400px
+}
+/* show series file */
+div.series{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+padding:40px 0;
+margin:0 auto
+}
+
+div.series p.app, div.series h4{
+flex-basis: 40%;
+text-align: left
+}
+div.series p.app{
+padding:0 20px 0 0;
+margin:0
+}
+
+div.series h4{
+align-self: center;
+margin:0;
+padding: 0;
+font-weight: normal
+}
+
+/* the animated photos on the homepage */
+
+.img-gallery {
+display: flex;
+justify-content: center;
+}
+
+
+div.img-item {
+position: relative;
+float: left;
+overflow: hidden;
+margin: 10px 1%;
+min-width: 220px;
+max-width: 310px;
+width: 100%;
+background: #000000;
+text-align: center;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+div.img-item * {
+box-sizing: border-box;
+}
+
+div.img-item img {
+max-width: 100%;
+vertical-align: top;
+height: 210px;
+}
+
+div.img-item span {
+position: absolute;
+top: 50%;
+left: 50%;
+border: none;
+font-size: 34px;
+color:white;
+width: 60px;
+height: 60px;
+line-height: 60px;
+}
+
+div.img-item a {
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+position: absolute;
+}
+
+div.img-item.blue {
+background-color: #34495e;
+}
+
+div.img-item.red {
+background-color: #e74c3c;
+}
+
+
+div.img-item.green {
+background-color: #16a085;
+}
+
+
+.img-item:hover img{
+opacity:0.3;
+filter: grayscale(100%);
+}
+
+.img-item *{
+transition-duration:1s
+}
+.img-item span{
+transform:translate(-130%,-60%) scale(0)
+}
+.img-item:hover span{
+transform:translate(-130%,-60%) scale(1);
+}
+
+/* animating the titles */
+
+.intrans{
+opacity:0;
+margin-bottom:300px;
+animation:intransition 1s ease-out forwards 
+}
+
+@keyframes intransition{
+100%{
+    margin-bottom:0;
+    opacity: 1;
+}
+}
+
+nav{
+opacity:0;
+animation:navbar_start 1s linear forwards 2s;
+}
+
+@keyframes navbar_start{
+100%{
+    opacity:1;
+}
+}
+
+.sub_animation{
+opacity:0;
+animation:navbar_start 1s linear forwards 1s
+}
+
+
