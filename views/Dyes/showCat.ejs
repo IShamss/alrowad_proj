@@ -1,39 +1,48 @@
 <% include ../../partials/header %>
 
-    <!-- Page Header -->
-    <header class="masthead" style="background-image: url('https://harborhonolulu.org/wp-content/uploads/2017/03/color-explosion-background.jpg')">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="page-heading">
-              <h1 class="intrans">Dyes</h1>
-              <span class="sub_animation" style="font-size:23px">By Korean <a class="anchor" href="http://www.ohyoung.net/" target ="_blank">OHYOUNG</a></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <h2 style="padding:10px 100px" class="sub_animation">Categories :</h2>
-    <% categories.forEach(function(category){ %>
-      <div style="padding:20px 40px;margin:0 auto" class="row m-5 border-bottom border-secondary pb-3 sub_animation">
-        <div class="col-md-7">
-          <a href="#">
-            <img class="dimensions img-fluid img-thumbnail rounded mb-3 mb-md-0" src="<%=category.image_url%>">
-          </a>
-        </div>
-        <div class="col-lg-4" style="margin:auto 0">
-          <h3><%=category.name%></h3>
-          <p><%=category.descr%></p>      
-          <a class="btn btn-outline-primary" href="/dyes/<%=category.id%>">View More</a>
-          
-        </div>
-      </div>
-    
-    <% }); %>
-    <hr>
-      
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('./img/dyes_bg.jpg')">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				<div class="page-heading">
+					<h1 class="intrans">Dyes</h1>
+					<span class="sub_animation" style="font-size: 23px"
+						>By Korean
+						<a class="anchor" href="http://www.ohyoung.net/" target="_blank"
+							>OHYOUNG</a
+						></span
+					>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<h2 style="padding: 10px 100px" class="sub_animation">Categories :</h2>
+<% categories.forEach(function(category){ %>
+<div
+	style="padding: 20px 40px; margin: 0 auto"
+	class="row m-5 border-bottom border-secondary pb-3 sub_animation"
+>
+	<div class="col-md-7">
+		<a href="#">
+			<img
+				class="dimensions img-fluid img-thumbnail rounded mb-3 mb-md-0"
+				src="<%=category.image_url%>"
+			/>
+		</a>
+	</div>
+	<div class="col-lg-4" style="margin: auto 0">
+		<h3><%=category.name%></h3>
+		<p><%=category.descr%></p>
+		<a class="btn btn-outline-primary" href="/dyes/<%=category.id%>"
+			>View More</a
+		>
+	</div>
+</div>
+
+<% }); %>
+<hr />
 
 <% include ../../partials/footer %>
-
-    

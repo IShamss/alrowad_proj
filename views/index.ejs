@@ -1,97 +1,116 @@
 <% include ../partials/header %>
-    <!-- Page Header -->
-    <header class="masthead" >
-      
-      <div>
-        <ul class="slideshow">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-      </ul>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="site-heading">
-              <h1 id="head-h1">       </h1>
-              <span class="subheading">    </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+<!-- Page Header -->
+<header class="masthead" id="animation">
+	<div>
+		<ul class="slideshow">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- <div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto">
+				<div class="site-heading">
+					<h1 id="head-h1"></h1>
+					<span class="subheading"> </span>
+				</div>
+			</div>
+		</div>
+	</div> -->
+</header>
 
+<!-- Main Content -->
+<div class="container d-flex flex-column">
+	<h1 class="sub_animation" style="text-align: center; padding-bottom: 20px">
+		Our Products
+	</h1>
 
-    
+	<div class="img-gallery container sub_animation" style="padding: 30px auto">
+		<div class="img-item red">
+			<img
+				src="https://images.unsplash.com/photo-1500042600524-37ecb686c775?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+			/>
+			<a href="/dyes"><span style="left: 62%">Dyes</span></a>
+			<%# <i class="fa fa-camera"></i> %>
+		</div>
 
-    <!-- Main Content -->
-    <div class="container d-flex flex-column" >
-    <h1 class="sub_animation" style="text-align:center;padding-bottom:20px">Our Products</h1>
-      
-      <div class="img-galllery container sub_animation" style="padding:30px auto">
-        <div class="img-item red">
-          <img src="https://images.unsplash.com/photo-1500042600524-37ecb686c775?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"/>
-          <a href="/dyes"><span style="left:62%">Dyes</span></a>
-          <%# <i class="fa fa-camera"></i> %>
-        </div>
+		<div class="img-item blue">
+			<img
+				src="https://images.unsplash.com/photo-1429772011165-0c2e054367b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+			/>
+			<a href="/machines"><span style="left: 52%">Machines</span></a>
+			<%# <i class="fa fa-paw"></i> %>
+		</div>
 
-        <div class="img-item blue">
-          <img src="https://images.unsplash.com/photo-1429772011165-0c2e054367b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"/>
-          <a href="/machines"><span style="left:52%">Machines</span></a>
-          <%# <i class="fa fa-paw"></i> %>
-        </div>
+		<div class="img-item green">
+			<img
+				src="https://images.unsplash.com/photo-1503475173304-5d340b3e30dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80"
+			/>
+			<a href="/brighteners"><span>Brighteners</span></a>
+			<%# <i class="fa fa-cloud"></i> %>
+		</div>
+	</div>
 
-        <div class="img-item green">
-          <img src="https://images.unsplash.com/photo-1503475173304-5d340b3e30dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80"/>
-          <a href="/brighteners"><span>Brighteners</span></a>
-          <%# <i class="fa fa-cloud"></i> %>
-        </div>
-        
-      </div>
+	<hr />
 
-      <hr>
+	<div class="row" style="padding: 30px auto">
+		<div class="col-lg-8 col-md-10 mx-auto">
+			<h1
+				class="d-flex mb-5 font-weight-bold border-bottom border-secondary py-3 changefont"
+				style="width: 150px"
+			>
+				News
+			</h1>
+			<div class="post-preview">
+				<a href="/news">
+					<h2 style="font-size: 30px" class="post-title">
+						<%=posts[0].title%>
+					</h2>
+					<h3 style="font-size: 15px" class="post-subtitle">
+						<%=posts[0].descr%>
+					</h3>
+				</a>
+				<hr />
+			</div>
+			<!-- Pager -->
+			<div class="clearfix">
+				<a class="btn btn-outline-primary float-right" href="/news"
+					>Older Posts &rarr;</a
+				>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-8 col-md-10 mx-auto">
+			<h1
+				class="d-flex mb-5 font-weight-bold border-bottom border-secondary py-3 changefont"
+				style="width: 250px"
+			>
+				Case Studies
+			</h1>
+			<div class="post-preview">
+				<a href="/case">
+					<h2 style="font-size: 30px" class="post-title">
+						<%=cases[0].title%>
+					</h2>
+					<h3 style="font-size: 15px" class="post-subtitle">
+						<%=cases[0].descr%>
+					</h3>
+				</a>
+				<hr />
+			</div>
+			<div class="clearfix">
+				<a class="btn btn-outline-primary float-right" href="/case"
+					>Older Case Studies &rarr;</a
+				>
+			</div>
+		</div>
+	</div>
+</div>
 
-      
-        <div class="row" style="padding:30px auto">
-            <div class="col-lg-8 col-md-10 mx-auto">
-                <h1 class="d-flex mb-5 font-weight-bold border-bottom border-secondary py-3 changefont" style="width:150px">News</h1>
-            <div class="post-preview">
-            
-            <a href="/news">
-                <h2 style="font-size:30px;" class="post-title"><%=posts[0].title%></h2>
-                <h3 style="font-size:15px" class="post-subtitle"><%=posts[0].descr%></h3>
-            </a>
-            <hr>   
-        </div>
-        <!-- Pager -->
-        <div class="clearfix">
-            <a class="btn btn-outline-primary float-right" href="/news">Older Posts &rarr;</a>
-        </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-            <h1 class="d-flex mb-5 font-weight-bold border-bottom border-secondary py-3 changefont" style="width:250px">Case Studies</h1>
-            <div class="post-preview">
-            
-            <a href="/case">
-                <h2 style="font-size:30px;" class="post-title"><%=cases[0].title%></h2>
-                <h3 style="font-size:15px" class="post-subtitle"><%=cases[0].descr%></h3>
-            </a>
-        <hr>
-        
-            
-        </div>
-        <div class="clearfix">
-            <a class="btn btn-outline-primary float-right" href="/case">Older Case Studies &rarr;</a>
-        </div>
-    </div>
-    </div>
-    </div>
-
-    <hr>
+<hr />
 
 <% include ../partials/footer %>
-
