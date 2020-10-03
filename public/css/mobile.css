@@ -48,10 +48,60 @@
 	span.subheading {
 		display: none;
 	}
-	iframe {
+	#map {
 		display: none;
 	}
 	a.btn .btn-outline-info {
 		font-size: 8px;
+	}
+	div.card-body > h5 {
+		font-size: 13px;
+		padding: 5px 4px;
+	}
+	div.card-body > a.btn {
+		padding: 10px;
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 30px;
+	}
+	div.thumbnail > img.img-responsive {
+		width: 90%;
+		height: 70%;
+	}
+	div.col-md-11 > p {
+		font-size: 10px;
+	}
+	td > a {
+		font-size: 12px;
+	}
+	div.row.my-3 > div.col-11 .border-bottom .border-secondary {
+		display: flex;
+		float: none;
+		flex-direction: column;
+	}
+	div.col-lg-8.col-md-10.mx-auto > h2 {
+		font-size: 15px;
+	}
+	div.col-lg-8.col-md-10.mx-auto > p {
+		font-size: 12px;
+	}
+	#facebook_btn {
+		font-size: 9px;
+	}
+	#contact_me {
+		min-width: 100%;
+		flex: 1;
+	}
+	#contact_me > p {
+		font-size: 13px;
+	}
+	#contact_me > h3 {
+		font-size: 24px;
+	}
+	#color {
+		height: 190px;
+	}
+	div.series h4 > a {
+		font-size: 17px;
 	}
 }
