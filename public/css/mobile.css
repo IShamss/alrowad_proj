@@ -3,6 +3,10 @@
 		font-size: 9px;
 	}
 	#animation {
+		height: 260px;
+		margin-bottom: 0px;
+	}
+	#our-products {
 		display: none;
 	}
 	.masthead {
